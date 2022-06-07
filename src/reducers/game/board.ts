@@ -15,7 +15,8 @@ export const reducer = (
     case "DROP_COIN":
       const { column, color } = action.payload;
       return dropCoin(state, column, color);
-
+    case "RESTORE_BOARD":
+      return initialState;
     default:
       return state;
   }
